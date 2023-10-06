@@ -25,11 +25,8 @@
 
 > 具体功能看cpp reference
 
-- [ ] at()
 - [ ] size()
-- [ ] clear()
 - [ ] resize()
-- [ ] reserve()
 - [ ] capacity()
 - [ ] insert(pos,str)
 
@@ -40,8 +37,13 @@
 
 ## Optional
 
-> 感兴趣可以做，选做
+> 选做,感兴趣用空可以做,可能佷耗时
 
 - [ ] RAII: 实现类似shared_ptr的引用计数进行非拷贝的字符串复制(不要用shared_ptr来实现)
 - [ ] Random access iterator [link](https://en.cppreference.com/w/cpp/named_req/RandomAccessIterator): 实现`begin(),end(),rbegin(),rend()` 成员函数，支持`std::sort`等算法 (~~相当于vector<char>了~~)
 
+## Hits
+
+- 使用std::memcpy进行拷贝
+- 不考虑处理用户的脑瘫行为(如对返回的data进行delete等等)
+- 对nullptr执行delete不会报错(无任何效果)
